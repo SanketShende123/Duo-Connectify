@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Duo-Connectify</title>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-form">
+      <div class="app-logo">
+        <i class="fas fa-comments"></i>
+        <h1>Duo-Connectify</h1>
+      </div>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Enter your username"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="profile-color">Profile Color</label>
+          <input
+            type="color"
+            name="profile-color"
+            id="profile-color"
+            value="#3498db"
+          />
+        </div>
+        <button type="submit" class="btn">Start Chatting</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
