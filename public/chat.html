@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Duo-Connectify Chat</title>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <div class="app-logo">
+          <i class="fas fa-comments"></i>
+          <h2>Duo-Connectify</h2>
+        </div>
+        <div class="user-profile">
+          <div class="user-avatar" id="current-user-avatar">
+            <!-- Avatar will be set by JavaScript -->
+          </div>
+          <div class="user-name" id="current-user-name">
+            <!-- Username will be set by JavaScript -->
+          </div>
+        </div>
+      </div>
+      <div class="user-search">
+        <input type="text" id="user-search" placeholder="Search users...">
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="users-list" id="users-list">
+        <!-- Users will be added here dynamically -->
+      </div>
+    </div>
+    <div class="chat-main">
+      <div class="chat-header">
+        <div class="chat-user-info">
+          <div class="user-avatar" id="chat-user-avatar">
+            <!-- Avatar will be set by JavaScript -->
+          </div>
+          <div class="user-details">
+            <div class="user-name" id="chat-user-name">Select a user to start chatting</div>
+            <div class="user-status" id="chat-user-status"></div>
+          </div>
+        </div>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+        <!-- Messages will be added here dynamically -->
+        <div class="welcome-message">
+          <h3>Welcome to Duo-Connectify!</h3>
+          <p>Select a user from the sidebar to start chatting.</p>
+        </div>
+      </div>
+      <div class="chat-form-container">
+        <div class="typing-indicator" id="typing-indicator"></div>
+        <form id="chat-form">
+          <input
+            id="msg"
+            type="text"
+            placeholder="Type a message..."
+            required
+            autocomplete="off"
+            disabled
+          />
+          <button class="btn" disabled><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
